@@ -1,5 +1,7 @@
 ﻿using Sandbox.Utility;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Editor;
 
@@ -290,10 +292,54 @@ public partial class DockManager : Widget
 
 		var menu = new Menu( Parent );
 		menu.AddOption( $"Close Tab", "close", widget.Close );
-		// Weren't done right before, if we want them add them again
-		// Close Other Tabs
-		// menu.AddOption( $"Show {tabName} in Asset Browser", "manage_search", () => EditorEvent.Run( "assetsystem.highlight", session.Scene.Source.ResourcePath ); );
+
+		AppendSceneTabOptions( menu, widget );
+
+		//menu.AddOption( $"Show {tabName} in Asset Browser", "manage_search", () => EditorEvent.Run( "assetsystem.highlight", session.Scene.Source.ResourcePath ); );
 		menu.OpenAtCursor();
+	}
+
+	void AppendSceneTabOptions( Menu menu, Widget widget )
+	{
+		if ( menu is null || widget is null )
+			return;
+
+		// Only add the extra tab-management options when we're on a SceneDock tab.
+		List<SceneEditorSession> openSessions = SceneEditorSession.All
+			.Where( session => session?.SceneDock?.IsValid() ?? false )
+			.ToList();
+
+		SceneEditorSession currentSession = openSessions.FirstOrDefault( session => session.SceneDock == widget );
+		if ( currentSession is null )
+			return;
+
+		List<SceneEditorSession> otherSessions = openSessions.Where( session => session != currentSession ).ToList();
+		Option closeOthers = menu.AddOption( $"Close Other Tabs", "close", () => CloseSceneTabs( otherSessions ) );
+		closeOthers.Enabled = otherSessions.Count > 0;
+
+		// Use creation order for directional closes; good enough for tab strip parity.
+		List<SceneEditorSession> sessionsToLeft = openSessions.TakeWhile( session => session != currentSession ).ToList();
+		List<SceneEditorSession> sessionsToRight = openSessions.SkipWhile( session => session != currentSession ).Skip( 1 ).ToList();
+
+		Option closeLeft = menu.AddOption( $"Close Tabs to the Left", "chevron_left", () => CloseSceneTabs( sessionsToLeft ) );
+		closeLeft.Enabled = sessionsToLeft.Count > 0;
+
+		Option closeRight = menu.AddOption( $"Close Tabs to the Right", "chevron_right", () => CloseSceneTabs( sessionsToRight ) );
+		closeRight.Enabled = sessionsToRight.Count > 0;
+
+		Option closeAll = menu.AddOption( $"Close All Tabs", "close", () => CloseSceneTabs( openSessions ) );
+		closeAll.Enabled = openSessions.Count > 1;
+	}
+
+	static void CloseSceneTabs( IEnumerable<SceneEditorSession> sessions )
+	{
+		foreach ( SceneEditorSession session in sessions.ToList() )
+		{
+			if ( session?.SceneDock?.IsValid() == true )
+			{
+				session.SceneDock.Close();
+			}
+		}
 	}
 
 	internal bool _creatingDock = false;
