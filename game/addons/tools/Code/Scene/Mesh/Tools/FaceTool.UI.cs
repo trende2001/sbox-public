@@ -52,6 +52,7 @@ partial class FaceTool
 				CreateButton( "Collapse Faces", "unfold_less", "mesh.collapse", Collapse, _faces.Length > 0, grid );
 				CreateButton( "Remove Bad Faces", "delete_sweep", "mesh.remove-bad-faces", RemoveBadFaces, _faces.Length > 0, grid );
 				CreateButton( "Flip All Faces", "flip", "mesh.flip-all-faces", FlipAllFaces, _faces.Length > 0, grid );
+				CreateButton( "Thicken Faces", "layers", "mesh.thicken-faces", ThickenFaces, _faces.Length > 0, grid );
 
 				grid.AddStretchCell();
 
@@ -279,6 +280,34 @@ partial class FaceTool
 				foreach ( var component in _components )
 				{
 					component.Mesh.FlipAllFaces();
+				}
+			}
+		}
+
+		[Shortcut( "mesh.thicken-faces", "G", typeof( SceneDock ) )]
+		private void ThickenFaces()
+		{
+			using var scope = SceneEditorSession.Scope();
+
+			using ( SceneEditorSession.Active.UndoScope( "Thicken Faces" )
+				.WithComponentChanges( _components )
+				.Push() )
+			{
+				var selection = SceneEditorSession.Active.Selection;
+				selection.Clear();
+
+				var amount = EditorScene.GizmoSettings.GridSpacing;
+
+				foreach ( var group in _faceGroups )
+				{
+					var mesh = group.Key.Mesh;
+					mesh.ThickenFaces( [.. group.Select( x => x.Handle )], amount, out var newFaces );
+					mesh.ComputeFaceTextureCoordinatesFromParameters();
+
+					foreach ( var hFace in newFaces )
+					{
+						selection.Add( new MeshFace( group.Key, hFace ) );
+					}
 				}
 			}
 		}
