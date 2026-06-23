@@ -298,6 +298,7 @@
           "Attenuation": 2.0701754,
           "ConeInner": 12.947369,
           "ConeOuter": 40.736843,
+          "Contribution": "Diffuse, Specular, Transmissive",
           "Cookie": null,
           "FogMode": "Enabled",
           "FogStrength": 1,
@@ -340,6 +341,7 @@
           "Attenuation": 2.0701754,
           "ConeInner": 12.947369,
           "ConeOuter": 40.736843,
+          "Contribution": "Diffuse, Specular, Transmissive",
           "Cookie": null,
           "FogMode": "Enabled",
           "FogStrength": 1,
@@ -459,7 +461,7 @@
                       "__enabled": true,
                       "Flags": 0,
                       "AnimationGraph": null,
-                      "BodyGroups": 130,
+                      "BodyGroups": 3748,
                       "BoneMergeTarget": null,
                       "CreateAttachments": false,
                       "CreateBoneObjects": true,
@@ -467,7 +469,7 @@
                       "MaterialGroup": "skin_light",
                       "MaterialOverride": null,
                       "Materials": null,
-                      "Model": "models/citizen_human/citizen_human_female.vmdl",
+                      "Model": "models/citizen_human/citizen_human_male.vmdl",
                       "Morphs": {},
                       "OnComponentDestroy": null,
                       "OnComponentDisabled": null,
@@ -2600,7 +2602,7 @@
                       ]
                     },
                     {
-                      "__guid": "9e97cf97-2ea3-4f90-b609-d4f03639bf8c",
+                      "__guid": "d9154aad-148a-40b1-b76c-4d8fc06343fa",
                       "__version": 2,
                       "Flags": 0,
                       "Name": "Clothing - hair_shortscruffy_brown",
@@ -2617,7 +2619,7 @@
                       "Components": [
                         {
                           "__type": "Sandbox.SkinnedModelRenderer",
-                          "__guid": "90bae973-9ac5-4e69-8cfa-eff4c499c770",
+                          "__guid": "2965eca9-af64-46c9-b678-e96573f95f7d",
                           "__enabled": true,
                           "Flags": 0,
                           "AnimationGraph": null,
@@ -2669,7 +2671,7 @@
                       "Children": []
                     },
                     {
-                      "__guid": "bdec5aa4-83c3-4189-a91b-4bbc1ed1f04b",
+                      "__guid": "b4aeec1b-0570-4f76-902a-ed85ad8b829b",
                       "__version": 2,
                       "Flags": 0,
                       "Name": "Clothing - moustache",
@@ -2686,7 +2688,7 @@
                       "Components": [
                         {
                           "__type": "Sandbox.SkinnedModelRenderer",
-                          "__guid": "3857202d-47c9-4d49-ab6a-0fad92267818",
+                          "__guid": "d4ac78cf-4ef4-4778-8cf3-9bcfd4bacfb0",
                           "__enabled": true,
                           "Flags": 0,
                           "AnimationGraph": null,
@@ -2738,7 +2740,7 @@
                       "Children": []
                     },
                     {
-                      "__guid": "157cd128-6252-4f61-b147-4b3f991ac10d",
+                      "__guid": "258020c2-db10-4591-8fcb-ed00bcfe7686",
                       "__version": 2,
                       "Flags": 0,
                       "Name": "Clothing - blue_jumpsuit",
@@ -2755,7 +2757,7 @@
                       "Components": [
                         {
                           "__type": "Sandbox.SkinnedModelRenderer",
-                          "__guid": "672fabd8-bca7-472f-8ea9-f1d32af7cf2c",
+                          "__guid": "46458c15-f2f2-4cd1-b07a-816fd00a007a",
                           "__enabled": true,
                           "Flags": 0,
                           "AnimationGraph": null,
@@ -2807,7 +2809,7 @@
                       "Children": []
                     },
                     {
-                      "__guid": "0187c445-a5a0-4ea4-8796-529603ceff41",
+                      "__guid": "c9d6dcc8-5b9d-41c2-bbd2-440f17cba91a",
                       "__version": 2,
                       "Flags": 0,
                       "Name": "Clothing - trainers",
@@ -2824,7 +2826,7 @@
                       "Components": [
                         {
                           "__type": "Sandbox.SkinnedModelRenderer",
-                          "__guid": "66e42175-16d9-4570-a7ae-5ce416624fd4",
+                          "__guid": "076aa31d-6b2b-4066-960f-756fca86e2c4",
                           "__enabled": true,
                           "Flags": 0,
                           "AnimationGraph": null,
@@ -4771,7 +4773,7 @@
                       ]
                     },
                     {
-                      "__guid": "1cd9b37c-7a05-4cfc-a100-77065e08e47d",
+                      "__guid": "32a91d23-b04c-4bbe-9ffe-9ad62bdf26d4",
                       "__version": 2,
                       "Flags": 0,
                       "Name": "Clothing - eyebrows",
@@ -4788,7 +4790,7 @@
                       "Components": [
                         {
                           "__type": "Sandbox.SkinnedModelRenderer",
-                          "__guid": "43ef8735-f5b4-4d0b-ad97-d7059889e882",
+                          "__guid": "234bc155-0736-4733-9c7d-f71988b1b917",
                           "__enabled": true,
                           "Flags": 0,
                           "AnimationGraph": null,
@@ -4840,7 +4842,7 @@
                       "Children": []
                     },
                     {
-                      "__guid": "c680b650-d034-4995-b551-899e21e0b178",
+                      "__guid": "c9db2245-06f4-4dfe-b2b5-08ed231a9343",
                       "__version": 2,
                       "Flags": 0,
                       "Name": "Clothing - hair_shortscruffy_brown",
@@ -4857,7 +4859,7 @@
                       "Components": [
                         {
                           "__type": "Sandbox.SkinnedModelRenderer",
-                          "__guid": "f7cb6fee-a83f-4b32-a79a-60e552e8eeaa",
+                          "__guid": "e14a3f40-6131-48b5-aa4a-4072b1901b8c",
                           "__enabled": true,
                           "Flags": 0,
                           "AnimationGraph": null,
@@ -4909,7 +4911,7 @@
                       "Children": []
                     },
                     {
-                      "__guid": "85f42b47-4615-4c33-9a65-4ff896a6f956",
+                      "__guid": "01adb855-098e-4ccd-af63-c1c9b498ad2a",
                       "__version": 2,
                       "Flags": 0,
                       "Name": "Clothing - moustache",
@@ -4926,7 +4928,7 @@
                       "Components": [
                         {
                           "__type": "Sandbox.SkinnedModelRenderer",
-                          "__guid": "02271365-c829-4422-8aba-be6c5a7db14d",
+                          "__guid": "69d0f3b8-271d-447e-823e-fff826c271a5",
                           "__enabled": true,
                           "Flags": 0,
                           "AnimationGraph": null,
@@ -4978,7 +4980,7 @@
                       "Children": []
                     },
                     {
-                      "__guid": "40321b71-7e6a-47a3-b05b-94818c79c074",
+                      "__guid": "f02847c9-a99c-49bc-b4e0-43db5ab92ac9",
                       "__version": 2,
                       "Flags": 0,
                       "Name": "Clothing - blue_jumpsuit",
@@ -4995,7 +4997,7 @@
                       "Components": [
                         {
                           "__type": "Sandbox.SkinnedModelRenderer",
-                          "__guid": "40771fb0-bbc5-4441-9d6c-808d85e04a3a",
+                          "__guid": "caa81fee-1a67-44ad-bb7c-05f15b97b86e",
                           "__enabled": true,
                           "Flags": 0,
                           "AnimationGraph": null,
@@ -5047,7 +5049,7 @@
                       "Children": []
                     },
                     {
-                      "__guid": "d58e094a-f002-48c8-be01-3838667b29d9",
+                      "__guid": "a8a12f39-59fa-459a-aa79-9397db927b8c",
                       "__version": 2,
                       "Flags": 0,
                       "Name": "Clothing - trainers",
@@ -5064,7 +5066,7 @@
                       "Components": [
                         {
                           "__type": "Sandbox.SkinnedModelRenderer",
-                          "__guid": "dcd44597-82b1-411f-b6c0-9380c6acf3d5",
+                          "__guid": "3a1cfcc1-6521-43d9-9bcd-7239ededdacd",
                           "__enabled": true,
                           "Flags": 0,
                           "AnimationGraph": null,
@@ -5158,7 +5160,8 @@
               "OnComponentStart": null,
               "OnComponentUpdate": null,
               "ProbeDensity": 8,
-              "RelocationTexture": "scenes/menu-main_scene_data/ddgi/indirect light_relocation_19ba681a-294a-4712-906d-41949ddeed96.vtex"
+              "RelocationTexture": "scenes/menu-main_scene_data/ddgi/indirect light_relocation_19ba681a-294a-4712-906d-41949ddeed96.vtex",
+              "RenderExcludeTags": ""
             },
             {
               "__type": "Sandbox.EnvmapProbe",
@@ -5185,6 +5188,7 @@
               "OnComponentUpdate": null,
               "Priority": 0,
               "Projection": "Sphere",
+              "RenderExcludeTags": "",
               "Resolution": "Large",
               "Texture": null,
               "TintColor": "1,1,1,1",
@@ -5706,6 +5710,7 @@
                       "__guid": "8fb81e9c-fc6b-4873-98a8-26b230e7ebd5",
                       "__enabled": true,
                       "Flags": 0,
+                      "Contribution": "Diffuse, Specular, Transmissive",
                       "FogMode": "Enabled",
                       "FogStrength": 1,
                       "LightColor": "0.94419,0.87763,0.80805,1",
@@ -33620,6 +33625,7 @@
                       "Attenuation": 1,
                       "ConeInner": 70,
                       "ConeOuter": 85,
+                      "Contribution": "Diffuse, Specular, Transmissive",
                       "Cookie": null,
                       "FogMode": "Enabled",
                       "FogStrength": 1,
@@ -33755,6 +33761,7 @@
                       "Attenuation": 1.9137931,
                       "ConeInner": 70,
                       "ConeOuter": 85,
+                      "Contribution": "Diffuse, Specular, Transmissive",
                       "Cookie": null,
                       "FogMode": "Enabled",
                       "FogStrength": 1,
@@ -33890,6 +33897,7 @@
                       "Attenuation": 1.9137931,
                       "ConeInner": 70,
                       "ConeOuter": 85,
+                      "Contribution": "Diffuse, Specular, Transmissive",
                       "Cookie": null,
                       "FogMode": "Enabled",
                       "FogStrength": 1,
@@ -34025,6 +34033,7 @@
                       "Attenuation": 1,
                       "ConeInner": 70,
                       "ConeOuter": 85,
+                      "Contribution": "Diffuse, Specular, Transmissive",
                       "Cookie": null,
                       "FogMode": "Enabled",
                       "FogStrength": 1,
@@ -111235,6 +111244,7 @@
                   "Attenuation": 0.3448276,
                   "ConeInner": 50.12069,
                   "ConeOuter": 61.448277,
+                  "Contribution": "Diffuse, Specular, Transmissive",
                   "Cookie": null,
                   "FogMode": "Enabled",
                   "FogStrength": 1,
@@ -192124,17 +192134,14 @@
       "CustomBounds": false
     },
     "GameObjectSystems": {
-      "Sandbox.Clutter.ClutterGridSystem": {
-        "Storage": {
-          "$blob": "ca83da42-aff7-4cf0-bb9d-146562beb3a9"
-        }
-      },
-      "Sandbox.MovieMaker.MovieRecorderSystem": {
-        "DisableClientRecording": false
-      },
       "Sandbox.SelectionSetsSystem": {
         "Data": {
           "SelectionSets": []
+        }
+      },
+      "Sandbox.Clutter.ClutterGridSystem": {
+        "Storage": {
+          "$blob": "ca83da42-aff7-4cf0-bb9d-146562beb3a9"
         }
       }
     }
